@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+
+
+html {
+	/* STEP 2: Set base font size */
+	
+	/* STEP 3: Set base line-height (leading) */
+	
+	/* STEP 4: Set base font-family (font stack) */
+
+	background: #111;
+	/* STEP 10a: set the background image */
+	
+	/* Image credit: How much? by el patojo CC https://www.flickr.com/photos/elpatojo/250157893 */
+	/* STEP 10b: set the background attachment */
+	
+	/* STEP 10c: set the background image size to cover the viewport */
+	
+}
+/* STEP 5: Set font sizes according to a typographic scale (h1-h6 and p) */
+h1 {
+	
+	/* STEP 7a: Set primary heading font - use "Alfa Slab One" from Google Fonts - place the appropriate @import at the top of this CSS file, then set the font-family to the same, with a fallback to "Rockwell" - then set font-weight to normal (we don't need to bold these fonts) */
+	
+	/* ...try editing the CSS in the browser dev tools to see the fallback if the Google Font fails to load */
+}
+h1 em {
+	/* STEP 7e: The numero character/symbol is not heavy enough for the surrounding text, so we will set it with a heavy font, and eliminate the italics */
+	
+}
+h2 {
+	
+	/* STEP 7b: Set subheading font to 'Century Gothic', with a fallback to Futura for Mac, then lastly to sans-serif */
+	
+}
+h3 {
+	
+	/* STEP 7c: Set tertiary heading font to the same as above, then transform all h3 elements to UPPERCASE, with no bottom margin */
+	
+}
+h4 {
+	
+}
+h5 {
+	
+}
+h6 {
+	
+}
+p {
+	
+}
+/* STEP 7d: Set font for p in header to the same as the h2 and the h3 elements, using a descendant (contextual) selector */
+header p {
+	
+}
+/* STEP 9a: Reduce space between headings in page-level header H1 */
+
+/* STEP 8: Bump down subhead font size at top of article */
+header h2 {
+	
+	/* STEP 9b: Reduce space between headings in page-level header H2 */
+	
+}
+/* STEP 9c: Move h3 and p closer together in article sections */
+section h3 {
+	
+	/* STEP 13: Visual hierarchy needs improvement - reduce font size */
+	
+}
+section p {
+	
+	/* STEP 12a: Measure is 85+ - too long - bump up the font size */
+	
+	/* STEP 12b: Play with the leading (line-height) - raise to 1.8, then reduce to 1.2 - discuss typographic color and vertical rhythm */
+	
+	/* STEP 14a: Justification with text-align - left, right, center, justify */
+	
+	/* STEP 14b: Hyphenation - see Firefox implementation and change BODY width to 50% down below, then resize the window width in your browser to see the effect */
+	
+	/* STEP 16a: Play with some non-standard CSS properties like text-rendering - this can enable things like ligatures - look at the combination of letters f and i */
+	
+	/* STEP 16b: Change the font to Calibri, then watch the 'fi' and 'fl' combination render as a ligature - for some reason, 'ff' does not for this font */
+	
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering */
+}
+/* STEP 6: Basic layout - auto-centred single-column fixed width */
+body {
+	
+	/* STEP 14c: Change width of BODY to see how hyphenation works - then comment out */
+	
+	
+	background: #eee;
+}
+header {
+	background: #5C8096;
+	/* STEP 11a: Add whitespace - very important */
+	
+	/* STEP 15: Inset text effect with text shadow */
+	
+}
+section {
+	/* STEP 11b: Add more whitespace */
+	
+}
+footer {
+	background: #333;
+	color: #eee;
+	/* STEP 11c. Add even more whitespace */
+	
+}
+footer h3 {
+	font-size: 1.4em;
+}
+footer p, footer small {
+	font-family: "Century Gothic", Futura, sans-serif;
+}
+
