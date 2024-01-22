@@ -10,3 +10,13 @@ background-colour: #666;
 			padding: 5%;
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.75);
 ]
+
+/* Multi-column layout
+-------------------------------------------------- */
+main {
+  column-count: 2;
+
+}
+main p:first-child {
+  margin-top: 0;
+}
