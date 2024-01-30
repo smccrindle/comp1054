@@ -28,9 +28,9 @@ header {
 	border: 5px dotted blue;
 	background: #CCF;
 	/* STEP 9a: Fix the header - set the <header> as a flexbox, too */
-	display: flex;
+	
 	/* STEP 9b: Set the justify-content: space-between; to put the <h1> and the <nav> at opposite ends of the <header> */
-	justify-content: space-between;
+	
 }
 
 header nav ul {
