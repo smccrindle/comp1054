@@ -1,0 +1,54 @@
+@charset "utf-8";
+html {
+    box-sizing: border-box;
+}
+    *, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    font: 100%/1.4 Arial, Helvetica, sans-serif;
+}
+body {
+    width: 50%;
+    margin: 0 auto;
+}
+main section:nth-child(1) img:hover {
+    /* STEP 1: blur() */
+    
+}
+main section:nth-child(2) img:hover {
+    /* STEP 2: brightness() */
+    
+}
+main section:nth-child(3) img:hover {
+    /* STEP 3: contrast() */
+    
+}
+main section:nth-child(4) img:hover {
+    /* STEP 4: drop-shadow() */
+    
+}
+main section:nth-child(5) img:hover {
+    /* STEP 5: grayscale() */
+    
+}
+main section:nth-child(6) img:hover {
+    /* STEP 6: hue-rotate() */
+    
+}
+main section:nth-child(7) img:hover {
+    /* STEP 7: invert() */
+    
+}
+main section:nth-child(8) img:hover {
+    /* STEP 8: opacity() */
+    
+}
+main section:nth-child(9) img:hover {
+    /* STEP 9: saturate() */
+    
+}
+main section:nth-child(10) img:hover {
+    /* STEP 10: sepia() */
+    
+}
