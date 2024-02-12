@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CSS Triangles</title>
+	<style>
+		/* CSS Triangles for Creating Callouts
+		Thanks to http://cssdeck.com/labs/bv45bh6p */
+
+		div.callout {
+			margin: 50px auto;
+			padding: 25px;
+			text-align: center;
+			border-radius: 10px;
+			background-color: #333;
+			color: white;
+			font-family: sans-serif;
+			font-weight: bold;
+			font-size: 300%;
+			width: 300px;
+			height: 200px;
+			/* STEP 1: Position this element so generated content can be positioned with respect to itself */
+			
+		}
+		/* STEP 2: Generate CSS pseudo-element to function as the triangle that will be affixed to the above shape */
+		div.callout::before {
+			/* STEP 3: Generate an element with no content, and zero height and width */
+			
+			/* STEP 4: Create a very thick border around this empty element, with an alpha-transparent color like rgba(0,0,0,0.1)*/
+			
+			/* STEP 5: Position this element absolute (it will be positioned with respect to the parent element which is div.callout) */
+			
+			/* STEP 6: Set the left and bottom properties to place it underneath the callout shape */
+			
+			/* STEP 7: Set the border-top-color to #333 */
+			
+			/* STEP 8: Revisit STEP 4 above, and set the other 3 borders to color transparent */
+		}
+
+	</style>
+</head>
+<body>
+	<div class="callout">
+		<p>This is a CSS callout.</p>
+	</div>
+</body>
+</html>
