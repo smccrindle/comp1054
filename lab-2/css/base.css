@@ -1,6 +1,13 @@
-/* Base styles for Lab 7
+/* Base styles for Lab 2
 -------------------------------------------------- */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
 body {
+	font-family: sans-serif;
 	background-color: rgb(240,240,240);
 }
 header {
