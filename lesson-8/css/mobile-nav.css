@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+/* Variables
+	========================================================================== */
+
+/**
+* Declare variables for color palette from https://www.materialpalette.com/indigo/grey
+*/
+
+:root {
+	--dark-primary-color: #303F9F;
+	--light-primary-color: #C5CAE9;
+	--primary-color: #3F51B5;
+	--text-and-icons: #FFFFFF;
+	--accent-color: #9E9E9E;
+	--primary-text: #212121;
+	--secondary-text: #757575;
+	--divider-color: #BDBDBD; 
+}
+
+/* Basic page styles
+	========================================================================== */
+
+/**
+* With a mobile-first approach, layout the page header, main, footer, and navigation
+*/
+
+html {
+	font: 100%/1.4 sans-serif;
+	color: var(--primary-text);
+}
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-weight: bold;
+}
+/* Very basic image responsiveness */
+img {
+	width: 100%;
+}
+/* STEP 5: Put diagnostic borders around HEADER, HEADER H1, and HEADER NAV */
+header {
+	
+	background: var(--primary-color);
+	/* STEP 6a: Attach the HEADER to the top left of the viewport (fixed) */
+	
+	/* STEP 6b: Set the width to 100% (position: fixed sets with to auto) */
+	
+	/* STEP 6c: Arrange the children of the HEADER (H1 and NAV) with flexbox, using display: flex, and justify-content */
+	
+	/* STEP 19d: Set the z-index to 50 to set the header (and the containing navigation panel) to be on top of the footer at the bottom of the viewport */
+	
+}
+/* Link styling for the page-level header */
+header h1 {
+	
+	color: var(--text-and-icons);
+	margin: 20px;
+}
+header a:link {
+	color: var(--text-and-icons);
+}
+header a:visited {
+	color: var(--text-and-icons);
+}
+header a:focus {
+	color: var(--text-and-icons);
+}
+header a:hover {
+	color: var(--divider-color);
+}
+header a:active {
+	color: var(--primary-text);
+}
+header nav{
+	
+}
+main {
+	/* STEP 18a: The content of the page is a bit hard to read - let's add a top margin to the MAIN element, center it, and some padding */
+	
+	/* STEP 18b: We don't want the measure of the lines of body text to get too long - let's set a max-width on the MAIN element */
+	
+}
+footer {
+	background-color: var(--primary-color);
+	color: var(--text-and-icons);
+	/* STEP 19a: Let's fix the footer - attach it to the bottom of the viewport, add some padding, and set the width to 100% */
+	
+	font-size: 0.75rem;
+	/* STEP 19b: When the navigation panel is visible, the FOOTER shouldn't appear on top of it - set the z-index so the FOOTER is underneath the panel */
+	
+	/* STEP 19c: Notice this doesn't work - this is due to a vertical stacking order context (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context). We need to elevate the z-index of the HEADER element above to address this */
+}
+
+/* Mobile navigation system
+========================================================================== */
+
+/**
+* This touch-focused navigation bar uses the checkbox input element hack - read more at https://css-tricks.com/the-checkbox-hack/
+*/
+header nav ul {
+	background-color: var(--accent-color);
+	/* STEP 7a: This is the navigation panel - let's make it look good, before we hide it off the screen */
+	
+	/* STEP 7b: When the navigation panel is visible, it will need to overlay all of the content on the screen, so we need to attach it to the viewport with position: fixed, 0 from the top of the screen, and a bit over (15% or so) from the left */
+	
+	/* STEP 7c: It needs to be a great big wide panel, so make it 100% wide and tall */
+	
+	/* STEP 9: Now we need to hide the whole thing off the screen to the right, so change the above left: property to 100% (from the left margin) */
+	
+	/* STEP 13a: Set the z-index to 100 so that we can control the stacking order with respect to the menu buttons that are now hidden from view */
+	
+	/* STEP 13c: Set the opacity of the navigation panel to 50% so that we can see the interaction with the checkbox underneath */
+	
+	/* STEP 16: Remove the opacity declaration above - we no longer need it */
+	/* STEP 17: Let's make this really cool and animate the navigation panel so that it slides out to the left by transitioning any change to the left: property value */
+	
+}
+header nav ul a {
+	/* STEP 8: Make the links wider for greater accessibility with touch */
+	
+}
+#toggle-menu {
+	/* STEP 15: Hide the checkbox form element - the label is all we need to be visible (thanks to the for="toggle-menu" attribute in the HTML) */
+	
+}
+label[for="toggle-menu"] {
+	color: var(--text-and-icons);
+	/* STEP 10a: Make the menu and close menu icons look good */
+	
+	/* STEP 10b: Position the icons to the top right of the viewport */
+	
+	/* STEP 10c: Change the mouse cursor (arrow) to a finger pointer to encourage interaction with the icon on desktop */
+	
+	/* STEP 13b: Set the z-index for the LABEL to 200 so that it sits on top of the navigation panel */
+	
+}
+#close {
+	font-weight: bold;
+	/* STEP 11: Hide the big close menu "X" to start with - we only need this to close the menu once the user opens it using the hamburger icon */
+	
+}
+/* STEP 12: Reveal the navigation menu UL when the label for the #toggle-menu input is checked, using the general sibling selector (~) */
+
+#toggle-menu:checked + label #close {
+	/* STEP 14a: If the toggle-menu checkbox is checked, show the menu close button/icon */
+	
+}
+#toggle-menu:checked + label #hamburger {
+	/* STEP 14b: If the toggle-menu checkbox is checked, then we should hide the hamburger button/icon because the close button/icon is now visible */
+	
+}
+
+/* Laptop or desktop navigation system layout
+========================================================================== */
+
+/**
+* Offer a more appropriate navigation experience for bigger screens
+*/
+
+@media screen and (min-width: 768px) {
+	/* Hide the hamburger menu checkbox label (checkbox is already hidden) */
+	label[for="toggle-menu"] {
+			/* STEP 20: For large screens, we don't need the hamburger or the close menu icon/button */
+			
+	}
+	header nav ul {
+			/* STEP 21a: Restore the navigation so that it is back in the regular flow of the page */
+			
+			/* STEP 21b: We don't need the grey background, anymore */
+			
+	}
+	header nav li {
+			/* STEP 22: Set the LI elements to render horizontally instead of vertically */
+			
+	}
+	header a:hover {
+			color: var(--light-primary-color);
+	}
+}
+
+/* STEP 23: All done! The final step is to remove the ugly diagnostic borders above from the HEADER, the H1, and the NAV */
+
+/* Table styling
+========================================================================== */
+
+/**
+* Simple attractive styling for semantic tables
+*/
+
+table {
+	border-collapse: collapse;
+	caption-side: top;
+	width: 100%;
+}
+td, th {
+	border: 1px solid var(--secondary-text);
+	padding: 0.5rem;
+}
+th {
+	background: var(--secondary-text);
+	color: var(--text-and-icons);
+}
+tbody th {
+	text-align: left;
+}
+tbody tr:nth-child(even) {
+	background-color: var(--divider-color);
+}
+tbody td {
+	text-align: right;
+}
+tfoot td {
+	font-size: 0.6rem;
+}
+caption {
+	font-weight: bold;
+	color: var(--secondary-text);
+}
