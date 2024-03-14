@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Persistent Navigation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="css/normalize.css" rel="stylesheet" />
+		<!-- STEP 10: Extract all of the below CSS and put it into an external file, using the LINK element to attach it -->
+		<!-- STEP 9b: Attach the custom JavaScript we built with a SCRIPT element - remember the 'defer' attribute -->
+		<style>
+			body{
+				font-family: sans-serif;
+				background: #999;
+				min-width: 320px;
+				color: #333;
+			}
+			#container {
+				width: 90%;
+				margin: 0 auto;
+			}
+			header {
+				background: #ccc;
+				padding-top: 1em;
+			}
+			header nav {
+				overflow: hidden;
+			}
+			header nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				float: left;
+				position: relative;
+				left: 50%;
+			}
+			header nav ul li {
+				float: left;
+				position: relative;
+				right: 50%;
+				margin-left: 0.25em;
+				background:#ddd;
+			}
+			header nav a {
+				display: block;
+				padding: 0.75em;
+				color: #fff;
+				text-decoration: none;
+			}
+			header nav a:hover {
+				background: #fff;
+				color: #000;
+			}
+
+			/* STEP 1a: Persistent navigation - manually add the class="floater" to the HEADER NAV and build out a fixed horizontal navigation bar */
+			
+			/* STEP 1b: Remove the class="floater" from the HTML */
+
+			main {
+				background: white;
+				clear: both;
+				line-height: 1.4;
+				padding: 1em 0;
+			}
+			main p {
+				margin-top: 0;
+			}
+			main blockquote {
+			}
+
+			header h1 {
+				font-family: "Arial Black", Arial, sans-serif;
+				font-size: 300%;
+				margin: 0.5em;
+				text-shadow: 3px 3px 0 #333;
+				letter-spacing: -0.1em;
+				text-align: center;
+			}
+			header h1 a {
+				color: white;
+				text-decoration: none;
+			}
+			blockquote h2 {
+				text-transform: uppercase;
+			}
+
+			/* STEP 7a: Build out the styles for the pullquote, adding the class="pullquote2" to the SPAN element in the HTML to see how the styles look */
+
+			/* STEP 7b: Add leading quotation marks and style them */
+
+			/* STEP 7c: Remove the class"pullquote2" from the HTML */
+			footer {
+				background: #ccc;
+				padding: 1em;
+			}
+			footer h3 {
+				margin: 0;
+				font-family: "Arial Black", Arial, sans-serif;
+				font-size: 150%;
+				margin: 0.5em;
+				color: white;
+				text-shadow: 3px 3px 0 #333;
+				letter-spacing: -0.05em;
+				text-align: center;
+			}
+			footer p {
+				font-size: 50%;
+				text-align: center;
+			}
+			footer a {
+				color: black;
+			}
+			/* STEP 3a: Build out the sticky footer 'Back to top' button styles */
+			
+				/* STEP 3b: Now hide the button entirely, and we will make it visible later with JavaScript */
+			
+
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1><a href="">Persistent Navigation</a></h1>
+				<nav id="floatingbar">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Pricing</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+			<main>
+				<blockquote>
+					<h2>Desiderata</h2>
+
+					<p>Go placidly amid the noise and haste, and remember what peace there may be in silence. As far as possible without surrender be on good terms with all persons. Speak your truth quietly and clearly; and listen to others, even the dull and the ignorant; they too have their story.</p>
+
+					<p>Avoid loud and aggressive persons, they are vexations to the spirit. If you compare yourself with others, you may become vain and bitter; for always there will be greater and lesser persons than yourself. Enjoy your achievements as well as your plans.</p>
+
+					<p><span class="pullquote">Keep interested in your own career, however humble; it is a real possession in the changing fortunes of time.</span> Exercise caution in your business affairs; for the world is full of trickery. But let this not blind you to what virtue there is; many persons strive for high ideals; and everywhere life is full of heroism.</p>
+
+					<p>Be yourself. Especially, do not feign affection. Neither be cynical about love; for in the face of all aridity and disenchantment it is as perennial as the grass.</p>
+
+					<p>Take kindly the counsel of the years, gracefully surrendering the things of youth. Nurture strength of spirit to shield you in sudden misfortune. But do not distress yourself with dark imaginings. Many fears are born of fatigue and loneliness. Beyond a wholesome discipline, be gentle with yourself.</p>
+
+					<p>You are a child of the universe, no less than the trees and the stars; you have a right to be here. And whether or not it is clear to you, no doubt the universe is unfolding as it should.</p>
+
+					<p>Therefore be at peace with God, whatever you conceive Him to be, and whatever your labors and aspirations, in the noisy confusion of life keep peace with your soul.</p>
+
+					<p>With all its sham, drudgery, and broken dreams, it is still a beautiful world. Be cheerful. Strive to be happy.</p>
+
+					<p><cite>&ndash;Max Ehrmann</cite></p>
+			</main>
+			<footer>
+				<h3>© Sticky Footer Button Inc.</h3>
+				<!-- STEP 6a: Build a simple 'back to top' anchor -->
+				<p><a href="#" title="Back to top" class="top"><img src="images/arrows.svg" width="25" height="25" /></a></p>
+				<p><small>Arrow icon made by <a href="http://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></p>
+			</footer>
+		</div><!-- end #container -->
+		<script>
+		// STEP 2: Build out script to control visibility of persistent navigation based on the scrolling position
+		// STEP 2a: Grab the #floatingbar as a var
+		
+		// STEP 2b: Determine how far down the top of the #floatingbar is from the top of the viewport and capture it with a variable called navTop
+		
+		// STEP 4a: Get the 'Back to top' button from the DOM with a const topButton
+		
+		// STEP 8a: Assign any and all elements with the class="pullquote" to the const pullQuote
+		
+		// STEP 2c: Build an event listener for the scroll event (https://developer.mozilla.org/en-US/docs/Web/Events/scroll)
+		
+			// STEP 2d: Check if the scroll position is further down than the top of the navbar...
+			
+				// STEP 2e: Automatically add the class="floater" to enable the persistent navigation styles we built out in STEP 1
+				
+				// STEP 4b: Set the sticky footer 'Back to top' button to display 'block' as the user has scrolled down the page somewhat
+				
+			
+				// STEP 2f: The user is pretty close to the top of the page, so remove the class="floater" and display the regular tab-based navigation
+				
+				// STEP 4c: The user doesn't need the 'Back to top' button - they are at the top of the page, so set it to display 'none'
+					
+		
+
+			// STEP 6a: Attach event listener to 'Back to top' button that calls the scrollToTop function built in STEP 5
+			
+				// STEP 6b: Prevent the default action of the anchor
+			
+
+			// STEP 5a: Build out Scroll-To-Top function
+			
+				// STEP 5b: Use the scrollBy() method to scroll the browser back up to the top of the page (https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy)
+						
+
+			// STEP 8b: Write a forEach loop to duplicate the pullquote text and insert it into the page
+			
+				// STEP 8c: Get the parent element
+				
+				// STEP 8d: Clone the element (https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode)
+				
+				// STEP 8e: Add a special class to the cloned SPAN element
+				
+				// STEP 8f: Insert cloned element into the DOM
+				
+			
+			// STEP 9a: Move this entire JavaScript into an external file and put it into the /js folder
+			/* Animated scrolling of page to top function inspired by the great tutorial at https://dzone.com/articles/back-to-top-pure-javascript and the MDN page about scrollBy() at https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy */
+		</script>
+	</body>
+</html>
