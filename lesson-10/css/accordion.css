@@ -34,3 +34,5 @@ html {
 details:first-of-type {
 	
 }
+
+/* Thanks to Greg Gibson (https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/) and Chris Coyier (https://css-tricks.com/quick-reminder-that-details-summary-is-the-easiest-way-ever-to-make-an-accordion/) for some outstanding tips and tricks for styling <details> and <summary> */
