@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Box-sizing reset (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+/* STEP 3a: Basic styling for the DETAILS element */
+details {
+	border: 1px solid grey;
+	padding: 0 1rem;
+	background-color: whitesmoke;
+}
+/* STEP 3b: Adjacent sibling DETAILS elements don't need a top border */
+details + details {
+	border-top: none;
+}
+/* STEP 3c: Brighten up the currently open DETAILS panel (the browser adds the "open" attribute to the active element) */
+details[open] {
+	background-color: white;
+}
+/* STEP 4: Make the SUMMARY look a bit like a heading, and address affordance by turning the mouse cursor into a pointer to encourage user interaction */
+summary {
+	padding: 1rem 0;
+	font-size: 1.25rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+/* STEP 5a: Disable the default triangle toggle - it is fine, but we should learn how to customize this part of the widget */
+summary::marker {
+	content: none;
+}
+/* STEP 5b: Use the ::after pseudoelement to add a "+" character imploring user to "open" the panel */
+summary::after {
+	font-weight: bold;
+	float: right;
+	content: "+";
+}
+/* STEP 5c: If the panel is open, then change it to a "-" character to allow user to close it again - proceed to accordion.js for the next step */
+[open] summary::after {
+	content: "–";
+}
+/* STEP 10: Add rounded corners to the first and last DETAILS elements */
+details:first-of-type {
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+details:last-of-type {
+	border-radius: 0 0 0.5rem 0.5rem;
+}
