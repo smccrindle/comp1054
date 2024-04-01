@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+html {
+    font: 120%/1.2 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+/* STEP 7: Collapse borders */
+table {
+
+/* STEP 9a: Adjust placement of table caption */
+
+/* STEP 9b: Try different values for table-layout (https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout) in conjunction with the width property. */
+
+}
+/* STEP 10b: Zebra striping for columns */
+col:nth-child(2) {
+
+}
+
+/* STEP 8: Adjust padding for usability with TH and TD */
+td, th {
+
+}
+th {
+    background: rgba(225,225,225,1);
+}
+/* STEP 6: Align table headings in the table body */
+tbody th {
+
+}
+thead tr:first-child th:first-child {
+    /* Hide top left cell - it's empty */
+
+}
+/* STEP 10a: Zebra striping for rows */
+
+tfoot td {
+    font-size: 60%;
+}
+caption {
+    font-size: 150%;
+}
+/* STEP 10c: Have a look at the result in the browser, then head to js/tables.js for the next step */

@@ -1,0 +1,22 @@
+{
+    "name": "tablesort",
+    "description": "A sorting component for HTML tables",
+    "version": "1.6.3",
+    "author": "tristen <@fallsemo>",
+    "ender": "./ender.js",
+    "main": "./src/tablesort.js",
+    "homepage": "http://tristen.ca/tablesort/demo",
+    "contributors": [
+      "Olivier Vaillancourt <@ovaillancourt>",
+      "Dmitry Kichenko <@imissmyjuno>",
+      "Dong Liu <@dongliu>",
+      "Andrew Cobby <andrew.cobby@gmail.com>",
+      "Pavel D. <@thexpaw>"
+    ],
+    "licenses": [{
+      "type": "MIT"
+    }],
+    "devDependencies": {
+      "grunt": "0.3.x"
+    }
+}
