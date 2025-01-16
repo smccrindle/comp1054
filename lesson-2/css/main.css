@@ -77,7 +77,7 @@ section p {
 	
 	/* STEP 14a: Justification with text-align - left, right, center, justify */
 	
-	/* STEP 14b: Hyphenation - see Firefox implementation and change BODY width to 50% down below, then resize the window width in your browser to see the effect */
+	/* STEP 14b: Hyphenation - change BODY width to 50% down below, then resize the window width in your browser to see the effect */
 	
 	/* STEP 16a: Play with some non-standard CSS properties like text-rendering - this can enable things like ligatures - look at the combination of letters f and i */
 	
