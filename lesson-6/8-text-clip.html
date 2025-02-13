@@ -16,7 +16,11 @@
 
 			/* STEP 3: Set the background-clip (and -webkit-background-clip) property to text */
 
-			/* STEP 4: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
+		}
+		h2 {
+			/* STEP 4a: Apply another non-standard visual effect -webkit-text-stroke-color (and width) */
+
+			/* STEP 4b: Since text-stroke is center-aligned on the outline of the font, use paint-order to address this ugly default (https://css-tricks.com/text-stroke-stuck-middle/) */
 
 		}
 		/* "Florida gulf coast" By Mmacbeth - Own work, CC0, https://commons.wikimedia.org/w/index.php?curid=39319981 */
@@ -24,5 +28,6 @@
 </head>
 <body>
 	<h1>Text Clipping</h1>
+	<h2>Text Stroke</h2>
 </body>
 </html>
