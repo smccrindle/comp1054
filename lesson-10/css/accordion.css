@@ -18,6 +18,8 @@ html {
 }
 /* STEP 3a: Basic styling for the DETAILS element */
 
+/* STEP 12: Animate the accordion using transitions and @supports (thanks to the awesome tutorial at https://css-tricks.com/using-styling-the-details-element/#aa-animate-the-opening-and-closing) */
+
 /* STEP 3b: Adjacent sibling DETAILS elements don't need a top border */
 
 /* STEP 3c: Brighten up the currently open DETAILS panel (the browser adds the "open" attribute to the active element) */
@@ -30,7 +32,7 @@ html {
 
 /* STEP 5c: If the panel is open, then change it to a "-" character to allow user to close it again - proceed to accordion.js for the next step */
 
-/* STEP 10: Add rounded corners to the first and last DETAILS elements */
+/* STEP 10: Add rounded corners to the first and last DETAILS elements, then proceed to index.html for the next step */
 details:first-of-type {
 	
 }
